@@ -1,7 +1,9 @@
 <template>
   <Suspense>
       <template #default>
-        <div>123</div>  
+        <Layout>
+          <div>123</div>  
+        </Layout>
       </template>
       <template #fallback>
         <Loading />
@@ -10,9 +12,8 @@
 </template>
 
 <script lang="ts" setup>
-  import { ref } from 'vue';
-  import Loading from '@/components/Loading.vue' 
-  const isLoading = ref(true);
+  import Layout from '@/layout/index.vue';
+  import Loading from '@/components/Loading.vue'
 </script>
 
 <style scoped></style>
